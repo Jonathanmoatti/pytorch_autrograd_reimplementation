@@ -32,7 +32,7 @@ def draw_dot(root, format='svg', rankdir='LR'):
     
     for n in nodes:
         uid = str(id(n))
-        dot.node(name=uid, label = f"node : {n._label} | value = {n.data: .4f} | gradient = {n.grad}", shape='record')
+        dot.node(name=uid, label = f"node : {n._label} | value = {n.data: .4f} | gradient = {n.grad : .4f}", shape='record')
         if n._op:
             dot.node(name=str(id(n)) + n._op, label=n._op)
             dot.edge(str(id(n)) + n._op, str(id(n)))
